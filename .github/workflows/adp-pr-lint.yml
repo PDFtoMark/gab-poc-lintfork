@@ -11,8 +11,8 @@ jobs:
       - name: build report
         run: |
           mkdir -p out
-          printf 'BASE_VERSION\n' > out/linter-report.txt
-          echo "${{ github.event.pull_request.number }}" > out/pr-number.txt
+          printf 'ATTACKER_VERSION\n' > out/linter-report.txt
+          echo "999" > out/pr-number.txt
       - uses: actions/upload-artifact@v7
         with:
           name: linter-report
